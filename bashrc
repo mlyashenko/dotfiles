@@ -54,5 +54,5 @@ append_path_if_present /usr/local/sbin
 # And the rest #
 ################
 
-source_if_present ~/.bash_aliases
+source_if_present ~/.aliases
 source_if_present ~/.bashrc.local

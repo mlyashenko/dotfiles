@@ -1,0 +1,7 @@
+[user]
+  name  = undef
+  email = undef@mail.com
+
+[alias]
+  d     = diff
+  l     = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate

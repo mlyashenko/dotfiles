@@ -1,0 +1,10 @@
+# Aliases
+alias work="cd ~/Work"
+alias rsch="cd ~/Research"
+
+alias lsc="gnome-screensaver-command -l"
+alias flush_memcache="echo 'flush_all' | nc localhost 11211"
+
+# RoR aliase templates
+#alias {project}_up="rvm use ruby-{version} && cd ~/Work/{project} && bundle exec rails s"
+#alias {project}_shell="rvm use ruby-{version} && cd ~/Work/{project} && bundle exec rails c"
