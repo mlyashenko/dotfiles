@@ -1,6 +1,41 @@
-export PATH="$PATH:$HOME/bin"
+########################################################
+# set PATH to include user's private bin directories
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 export SCALA_HOME="/usr/local/scala"
 export PATH="$PATH:$SCALA_HOME/bin"
 
 export NODE_PATH="/usr/local/lib/node_modules:/usr/bin/node_modules"
+export PATH="$PATH:/opt/node/bin"
+
+export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))
+########################################################
+
+GOROOT="/opt/go"
+export PATH="$PATH:$GOROOT/bin"
+export GOROOT
+
+GOPATH="$HOME/Work/go_works"
+export GOPATH
+
+########################################################
+#PATH="$PATH:/opt/_/bin"
+#PATH="$PATH:/opt/_/bin"
+#PATH="$PATH:/opt/_/bin"
+
+#PATH="$PATH:$HOME/opt/_/bin"
+#PATH="$PATH:$HOME/opt/_/bin"
+#PATH="$PATH:$HOME/opt/_/bin"
+
+#export PATH
+########################################################
+
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+source "$HOME/.rvm/scripts/rvm"
+
+alias zzz-prod="ssh zzz-production -t 'cd /var/www/zzz/current; bash --login'"
+alias zzz-prod-sidekiq="ssh zzz-production -t 'cd /var/www/zzz/current; bash --login -c \"tail -f log/sidekiq.log\"'"
+alias zzz-prod-console="ssh zzz-production -t 'cd /var/www/zzz/current; bash --login -c \"rvm gemset use bonus && bundle exec rails c production\"; bash --login -c \"rvm gemset use bonus\"'"
+
+########################################################
